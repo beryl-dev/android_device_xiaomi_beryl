@@ -271,7 +271,8 @@ PRODUCT_PACKAGES += \
     WifiResOverlayBeryl
 
 PRODUCT_PACKAGES += \
-   LineageApertureOverlayBeryl
+   LineageApertureOverlayBeryl \
+   LineageDialerBeryl
 
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
