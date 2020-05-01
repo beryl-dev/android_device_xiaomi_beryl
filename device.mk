@@ -273,6 +273,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
    LineageApertureOverlayBeryl \
    LineageDialerBeryl \
+   LineageSDKOverlayBeryl \
    LineageSettingsOverlayBeryl
 
 # Partitions
