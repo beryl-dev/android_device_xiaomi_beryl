@@ -13,7 +13,6 @@ pendor.audiohal.telephonytx.type=2
 persist.vendor.audio.misound.disable=true
 
 # Bluetooth
-
 persist.bluetooth.a2dp_offload.disabled=true
 ro.vendor.bt.platform=connac1x
 ro.vendor.mtk.bt_sap_enable=true
@@ -166,3 +165,6 @@ ro.vendor.wifi.sap.concurrent.iface=ap1
 ro.vendor.wifi.sap.interface=ap0
 ro.vendor.wlan.chrdev=wmt_chrdev_wifi
 ro.vendor.wlan.gen=gen4m_6855
+
+# Zygote
+zygote.critical_window.minute=10
