@@ -274,6 +274,9 @@ PRODUCT_PACKAGES += \
     TetheringOverlayBeryl \
     WifiResOverlayBeryl
 
+PRODUCT_PACKAGES += \
+   LineageApertureOverlayBeryl
+
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
