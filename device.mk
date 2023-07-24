@@ -328,6 +328,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     PowerOffAlarm
 
+# Properties
+include $(LOCAL_PATH)/configs/props/vendor_logtag.mk
+
 # Pq
 PRODUCT_PACKAGES += \
     libpqparamparser
