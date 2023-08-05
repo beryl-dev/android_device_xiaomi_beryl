@@ -125,6 +125,9 @@ TARGET_USERIMAGES_USE_F2FS := true
 BOOT_SECURITY_PATCH := 2025-03-01
 VENDOR_SECURITY_PATCH := $(BOOT_SECURITY_PATCH)
 
+# SELinux
+include device/mediatek/sepolicy_vndr/SEPolicy.mk
+
 # Verified Boot
 BOARD_AVB_ENABLE := true
 BOARD_MOVE_GSI_AVB_KEYS_TO_VENDOR_BOOT := true
