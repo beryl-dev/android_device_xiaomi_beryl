@@ -270,6 +270,7 @@ PRODUCT_PACKAGES += \
     SettingsOverlayBeryl \
     SystemUIOverlayBeryl \
     TelephonyOverlayBeryl \
+    TetheringOverlayBeryl \
     WifiResOverlayBeryl
 
 # Partitions
