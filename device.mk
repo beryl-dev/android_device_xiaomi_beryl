@@ -8,6 +8,8 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/generic_ramdisk.mk)
 
 # Virtual A/B
+$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
+
 PRODUCT_PACKAGES += \
     checkpoint_gc \
     otapreopt_script \
