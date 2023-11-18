@@ -176,6 +176,12 @@ vendor/lib64/vendor.mediatek.hardware.bluetooth.audio@2.2.so
 # ConsumerIR
 vendor/lib64/hw/consumerir.default.so
 
+# Connectivity
+vendor/bin/conninfra_loader
+vendor/firmware/conninfra.cfg
+vendor/firmware/soc2_2_ram_mcu_1b_1_hdr.bin
+vendor/firmware/soc2_2_ram_mcu_1c_1_hdr.bin
+
 # Display
 vendor/bin/hw/mt6855/android.hardware.graphics.allocator@4.0-service-mediatek.mt6855;SYMLINK=vendor/bin/hw/android.hardware.graphics.allocator@4.0-service-mediatek
 vendor/bin/hw/vendor.mediatek.hardware.pq@2.2-service
