@@ -60,7 +60,6 @@ vendor.mtk.camera.app.fd.video=1
 
 # Chipset
 ro.soc.manufacturer=Mediatek
-ro.soc.model=MT6855
 
 # ConsumerIR
 ro.hardware.consumerir=common
