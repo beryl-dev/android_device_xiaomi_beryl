@@ -148,6 +148,7 @@ PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.3-service.xiaomi
 
 PRODUCT_PACKAGES += \
+    libudfpshandler \
     sensors.xiaomi.v2
 
 PRODUCT_PACKAGES += \
