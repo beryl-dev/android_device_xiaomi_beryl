@@ -5,6 +5,8 @@
 -->
 
 <resources>
+    <!-- Color of the UDFPS pressed view -->
+    <color name="config_udfpsColor">#00FFFFFF</color>
 
     <!-- Should we vibrate on an icon animation of the shelf. This should only be active if the
      vibrator is capable of subtle vibrations -->
