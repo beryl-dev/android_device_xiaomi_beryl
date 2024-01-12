@@ -8,4 +8,7 @@
     <!-- Adjust the icon padding in status bar for rounded corners --> 
     <dimen name="rounded_corner_content_padding">54.0px</dimen>
 
+    <!-- Pixel pitch of the device. um/px -->
+    <item name="pixel_pitch" format="float" type="dimen">52.92</item>
+
 </resources>
