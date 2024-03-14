@@ -209,11 +209,14 @@ class XiaomiBerylUdfpsHander : public UdfpsHandler {
             req.local_hbm_value = LHBM_TARGET_BRIGHTNESS_OFF_FINGER_UP;
             ioctl(disp_fd_.get(), MI_DISP_IOCTL_SET_LOCAL_HBM, &req);
             setFodStatus(FOD_STATUS_OFF);
-        } else if (vendorCode == 21 || vendorCode == 23) {
-            /*
-             * vendorCode = 21 waiting for fingerprint authentication
-             * vendorCode = 23 waiting for fingerprint enroll
-             */
+        }
+
+        /* vendorCode
+         * 21: waiting for finger
+         * 22: finger down
+         * 23: finger up
+         */
+        if (vendorCode == 21) {
             setFodStatus(FOD_STATUS_ON);
         }
     }
