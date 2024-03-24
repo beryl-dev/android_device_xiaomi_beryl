@@ -272,6 +272,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     CarrierConfigOverlayBeryl \
     FrameworksResOverlayBeryl \
+    PowerOffAlarmOverlayBeryl \
     SettingsOverlayBeryl \
     SystemUIOverlayBeryl \
     TelephonyOverlayBeryl \
