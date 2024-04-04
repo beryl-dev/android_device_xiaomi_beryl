@@ -84,6 +84,9 @@ persist.vendor.fingerprint.type=udfps
 persist.vendor.fingerprint.sensor_location=540|2110|105
 ro.vendor.sensors.xiaomi.udfps=true
 
+# FM Radio
+persist.vendor.connsys.fm_chipid=mt6631_6635
+
 # Keystore
 ro.crypto.volume.filenames_mode=aes-256-cts
 
