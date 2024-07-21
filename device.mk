@@ -276,7 +276,8 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
    LineageApertureOverlayBeryl \
-   LineageDialerBeryl
+   LineageDialerBeryl \
+   LineageSettingsOverlayBeryl
 
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
