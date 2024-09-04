@@ -10,6 +10,8 @@ on charger
     write /sys/class/devfreq/mtk-dvfsrc-devfreq/userspace/set_freq 0
 
 on init
+    write /sys/block/sda/queue/scheduler mq-deadline
+
     # Set teo as cpu idle governor
     write /sys/devices/system/cpu/cpuidle/current_governor teo
 
