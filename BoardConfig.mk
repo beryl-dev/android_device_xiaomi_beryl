@@ -36,6 +36,9 @@ TARGET_2ND_CPU_VARIANT := cortex-a55
 # Enable 64-bit for non-zygote.
 ZYGOTE_FORCE_64 := true
 
+# Include 64-bit mediaserver to support 64-bit only devices
+TARGET_DYNAMIC_64_32_MEDIASERVER := true
+
 # Build
 BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
