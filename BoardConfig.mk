@@ -39,6 +39,9 @@ ZYGOTE_FORCE_64 := true
 # Include 64-bit mediaserver to support 64-bit only devices
 TARGET_DYNAMIC_64_32_MEDIASERVER := true
 
+# Include 64-bit drmserver to support 64-bit only devices
+TARGET_DYNAMIC_64_32_DRMSERVER := true
+
 # Build
 BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
