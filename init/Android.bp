@@ -6,6 +6,13 @@
 
 // fstab
 prebuilt_etc {
+    name: "init.mt6855.usb.rc",
+    src: "init.mt6855.usb.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
     name: "fstab.mt6855",
     src: "fstab.mt6855",
     vendor: true,

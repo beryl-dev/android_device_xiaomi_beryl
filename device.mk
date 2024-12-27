@@ -60,7 +60,8 @@ PRODUCT_PACKAGES += \
 # Init
 PRODUCT_PACKAGES += \
     fstab.mt6855 \
-    fstab.mt6855.vendor_ramdisk
+    fstab.mt6855.vendor_ramdisk \
+    init.mt6855.usb.rc
 
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
