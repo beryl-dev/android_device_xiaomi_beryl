@@ -1,2 +1,10 @@
+# Bluetooth
+
+persist.bluetooth.a2dp_offload.disabled=true
+ro.vendor.bt.platform=connac1x
+ro.vendor.mtk.bt_sap_enable=true
+vendor.bluetooth.ldac.abr=true
+bluetooth.device.class_of_device=90,2,12
+
 # ConsumerIR
 ro.hardware.consumerir=common
