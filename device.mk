@@ -47,6 +47,12 @@ AB_OTA_POSTINSTALL_CONFIG += \
 # API levels
 PRODUCT_SHIPPING_API_LEVEL := 34
 
+# Bluetooth
+PRODUCT_PACKAGES += \
+    android.hardware.bluetooth.audio@2.1-impl \
+    android.hardware.bluetooth@1.1.vendor \
+    libbluetooth_audio_session
+
 # ConsumerIr
 PRODUCT_PACKAGES += \
     android.hardware.ir-service.example
