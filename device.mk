@@ -74,6 +74,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     init.recovery.mt6855.rc
 
+# Libaedv
+ PRODUCT_PACKAGES += \
+     libaedv
+
 # Modules
 PRODUCT_PACKAGES += \
     init.insmod.sh \
