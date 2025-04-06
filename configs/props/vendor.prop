@@ -22,3 +22,7 @@ bluetooth.profile.sap.server.enabled?=false
 
 # ConsumerIR
 ro.hardware.consumerir=common
+
+# Trusted Execution Environment (TEE)
+ro.vendor.mtk_mitee_support=1
+ro.vendor.mtk_tee_gp_support=1
