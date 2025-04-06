@@ -47,6 +47,10 @@ AB_OTA_POSTINSTALL_CONFIG += \
 # API levels
 PRODUCT_SHIPPING_API_LEVEL := 34
 
+# ConsumerIr
+PRODUCT_PACKAGES += \
+    android.hardware.ir-service.example
+
 # FastbootD
 PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.1-impl.custom \

@@ -1,1 +1,4 @@
 # Unpinned blobs from beryl-user 15 AP3A.240905.015.A2 OS2.0.3.0.VOQINXM release-keys
+
+# ConsumerIR
+vendor/lib64/hw/consumerir.default.so
