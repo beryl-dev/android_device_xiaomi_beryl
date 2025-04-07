@@ -17,6 +17,10 @@ vendor/lib64/vendor.mediatek.hardware.bluetooth.audio@2.2.so
 # ConsumerIR
 vendor/lib64/hw/consumerir.default.so
 
+# Gatekeeper
+vendor/lib64/hw/gatekeeper.mitee.so
+vendor/lib64/hw/libSoftGatekeeper.so
+
 # Keymint
 vendor/bin/hw/android.hardware.security.keymint@1.0-service.mitee
 vendor/etc/init/android.hardware.security.keymint-service.mitee.rc
