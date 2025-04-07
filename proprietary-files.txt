@@ -17,6 +17,13 @@ vendor/lib64/vendor.mediatek.hardware.bluetooth.audio@2.2.so
 # ConsumerIR
 vendor/lib64/hw/consumerir.default.so
 
+# Keymint
+vendor/bin/hw/android.hardware.security.keymint@1.0-service.mitee
+vendor/etc/init/android.hardware.security.keymint-service.mitee.rc
+-vendor/etc/vintf/manifest/android.hardware.security.keymint-service.mitee.xml
+-vendor/etc/vintf/manifest/android.hardware.security.secureclock-service.mitee.xml
+-vendor/etc/vintf/manifest/android.hardware.security.sharedsecret-service.mitee.xml
+
 # NVRAM
 vendor/bin/hw/vendor.mediatek.hardware.nvram@1.1-service
 vendor/bin/nvram_daemon
