@@ -84,6 +84,22 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     init.recovery.mt6855.rc
 
+# Keystore
+PRODUCT_PACKAGES += \
+    android.hardware.keymaster@4.0.vendor:64 \
+    libcppbor_external.vendor:64 \
+    libkeymaster_messages.vendor:64 \
+    libkeymaster_portable.vendor:64 \
+    libkeymaster4support.vendor:64 \
+    libkeymint.vendor \
+    libpuresoftkeymasterdevice.vendor:64 \
+    lib_android_keymaster_keymint_utils.vendor
+
+PRODUCT_PACKAGES += \
+    android.hardware.security.keymint-V1-ndk_platform.vendor \
+    android.hardware.security.secureclock-V1-ndk_platform.vendor \
+    android.hardware.security.sharedsecret-V1-ndk_platform.vendor
+
 # Libaedv
  PRODUCT_PACKAGES += \
      libaedv
