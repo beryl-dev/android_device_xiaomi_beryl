@@ -232,5 +232,9 @@ PRODUCT_PACKAGES += \
     android.hardware.usb-service.mediatek \
     android.hardware.usb.gadget-service.mediatek
 
+# VNDK
+PRODUCT_PACKAGES += \
+    libutils-v32
+
 # Inherit the proprietary files
 $(call inherit-product, vendor/xiaomi/beryl/beryl-vendor.mk)
