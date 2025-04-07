@@ -159,6 +159,10 @@ PRODUCT_PACKAGES += \
  PRODUCT_PACKAGES += \
      libaedv
 
+# Light
+PRODUCT_PACKAGES += \
+    android.hardware.light-service.lineage
+
 # Modules
 PRODUCT_PACKAGES += \
     init.insmod.sh \
