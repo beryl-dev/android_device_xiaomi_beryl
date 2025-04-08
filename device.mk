@@ -114,6 +114,17 @@ PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.1-impl.custom \
     fastbootd
 
+# Fingerprint
+PRODUCT_PACKAGES += \
+    android.hardware.biometrics.fingerprint-service.xiaomi
+
+PRODUCT_PACKAGES += \
+    libudfpshandler \
+    sensors.xiaomi.v2
+
+PRODUCT_PACKAGES += \
+    vendor.xiaomi.hardware.fx.tunnel@1.0.vendor
+
 # Gatekeeper
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-impl \
@@ -135,6 +146,7 @@ PRODUCT_PACKAGES += \
     fstab.mt6855.vendor_ramdisk \
     init.cgroup.rc \
     init.connectivity.rc \
+    init.fingerprint.rc \
     init.modem.rc \
     init.mt6855.rc \
     init.mt6855.usb.rc \

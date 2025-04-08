@@ -82,6 +82,11 @@ debug.mediatek.disp_decompress=1
 ro.vendor.sdr2hdr.by.layer.support=false
 ro.vendor.smvr.p2batch.hd=4
 
+# Fingerprint
+persist.vendor.fingerprint.type=udfps
+persist.vendor.fingerprint.sensor_location=540|2110|105
+ro.vendor.sensors.xiaomi.udfps=true
+
 # Keystore
 ro.crypto.volume.filenames_mode=aes-256-cts
 
