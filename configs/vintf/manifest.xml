@@ -125,4 +125,9 @@
         <transport>hwbinder</transport>
         <fqname>@2.15::IPictureQuality/default</fqname>
     </hal>
+    <hal format="hidl">
+         <name>vendor.xiaomi.hardware.fx.tunnel</name>
+         <transport>hwbinder</transport>
+         <fqname>@1.0::IMiFxTunnel/default</fqname>
+     </hal>
 </manifest>
