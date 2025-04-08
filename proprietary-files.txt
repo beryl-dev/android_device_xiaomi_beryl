@@ -261,6 +261,11 @@ vendor/lib64/libtlcWidevineModularDrm.so
 vendor/lib64/libwvhidl.so
 vendor/lib64/mediadrm/libwvdrmengine.so
 
+# Fingerprint
+vendor/lib64/hw/fingerprint.goodix_fod.default.so
+vendor/lib64/hw/fingerprint.jiiov.default.so
+vendor/lib64/libgf_hal.so
+
 # Fuelgauge
 vendor/bin/fuelgauged
 vendor/bin/fuelgauged_nvram
