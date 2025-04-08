@@ -393,6 +393,16 @@ vendor/lib64/libvia-ril.so
 vendor/lib64/libwpfa.so
 vendor/lib64/vendor.mediatek.hardware.mtkradioex@3.0.so
 
+# Secure Element
+vendor/bin/hw/android.hardware.secure_element_snxxx@1.2-service
+vendor/etc/init/android.hardware.secure_element_snxxx@1.2-service.rc
+vendor/lib64/ese_spi_nxp_snxxx.so
+vendor/lib64/jcos_client.so
+vendor/lib64/se_extn_client.so
+vendor/lib64/ls_client.so
+vendor/lib64/libvpu.so
+vendor/lib64/libvpu5.so
+
 # Sensors
 vendor/firmware/remoteproc_scp
 vendor/lib64/hw/sensors.mediatek.V2.0.so:vendor/lib64/hw/sensors.mt6855.so;FIX_SONAME
