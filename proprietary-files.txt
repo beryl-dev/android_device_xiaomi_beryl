@@ -262,6 +262,14 @@ vendor/lib64/libfgauge_gm30.so
 vendor/lib64/hw/gatekeeper.mitee.so
 vendor/lib64/hw/libSoftGatekeeper.so
 
+# Kernel Modules (Init)
+vendor/etc/init/init.bt_drv.rc
+vendor/etc/init/init.connfem.rc
+vendor/etc/init/init.fmradio_drv.rc
+vendor/etc/init/init.gps_drv.rc
+vendor/etc/init/init.wlan_drv.rc
+vendor/etc/init/init.wmt_drv.rc
+
 # Keymint
 vendor/bin/hw/android.hardware.security.keymint@1.0-service.mitee
 vendor/etc/init/android.hardware.security.keymint-service.mitee.rc
