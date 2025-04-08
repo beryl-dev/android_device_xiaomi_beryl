@@ -55,8 +55,12 @@ fi
 
 function blob_fixup {
     case "$1" in
+        vendor/lib64/mt6855/libaalservice.so)
+            "$PATCHELF" --add-needed "android.hardware.sensors@1.0-convert-shared.so" "$2"
+            ;;
         vendor/lib64/hw/mt6855/vendor.mediatek.hardware.pq@2.15-impl.so)
             "$PATCHELF" --replace-needed "libutils.so" "libutils-v32.so" "$2"
+            "$PATCHELF" --add-needed "android.hardware.sensors@1.0-convert-shared.so" "$2"
             ;;
     esac
 }
