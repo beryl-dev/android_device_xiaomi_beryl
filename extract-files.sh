@@ -58,6 +58,9 @@ function blob_fixup {
         vendor/bin/hw/android.hardware.media.c2@1.2-mediatek-64b)
             "$PATCHELF" --add-needed "libstagefright_foundation-v33.so" "$2"
             ;;
+        vendor/lib64/hw/android.hardware.thermal@2.0-impl.so)
+            "${PATCHELF}" --replace-needed "libutils.so" "libutils-v32.so" "${2}"
+            ;;
         vendor/lib64/mt6855/libaalservice.so|\
         vendor/bin/mnld)
             "$PATCHELF" --add-needed "android.hardware.sensors@1.0-convert-shared.so" "$2"
