@@ -1,0 +1,156 @@
+import /vendor/etc/init/hw/init.mtkgki.rc
+
+# MTK project .rc configure
+
+on init
+    mkdir /mnt/media_rw/usbotg 0700 media_rw media_rw
+    mkdir /storage/usbotg 0700 root root
+
+on post-fs-data
+
+
+#Thermal
+    mkdir /data/vendor/thermal 0771 root system
+    mkdir /data/vendor/thermal/config 0771 root system
+    chown system system /sys/class/thermal/thermal_message/sconfig
+    chown system system /sys/class/thermal/thermal_message/boost
+    chown system system /sys/class/thermal/thermal_message/temp_state
+    chown system system /sys/class/thermal/thermal_message/thermal_max_brightness
+    chown system system /sys/class/thermal/thermal_message/balance_mode
+    chown system system /sys/class/mi_display/disp-DSI-0/thermal_hbm_disabled
+    chmod 0664 /sys/class/mi_display/disp-DSI-0/thermal_hbm_disabled
+    chown system system /sys/class/thermal/thermal_message/charger_temp
+    chown system system /sys/class/power_supply/battery/constant_charge_current
+    chmod 0664 /sys/class/power_supply/battery/constant_charge_current
+
+#Camera
+    chmod 0660 /dev/MAINAF
+    chown system camera /dev/MAINAF
+
+    chmod 0660 /dev/MAINAF2
+    chown system camera /dev/MAINAF2
+
+    chmod 0660 /dev/SUBAF
+    chown system camera /dev/SUBAF
+
+    chmod 0660 /dev/GAF001AF
+    chown system camera /dev/GAF001AF
+
+    chmod 0660 /dev/DW9714AF
+    chown system camera /dev/DW9714AF
+
+    chmod 0660 /dev/LC898212AF
+    chown system camera /dev/LC898212AF
+
+    chmod 0660 /dev/BU64745GWZAF
+    chown system camera /dev/BU64745GWZAF
+
+#Add for tp touchpad
+    mkdir /data/vendor/touchpad 0660 system system
+
+#apois 
+    mkdir /mnt/vendor/persist 0777 system camera
+    mkdir /mnt/vendor/persist/camera 0777 system camera
+    mkdir /data/vendor/camera/ 0777 system camera
+    chmod 777 /mnt/vendor/nvcfg/sensor
+    chmod +r /mnt/vendor/nvcfg/sensor/gyro_cali.json
+    chmod +r /mnt/vendor/nvcfg/sensor/gyro_bias.json
+    chmod +r /mnt/vendor/nvcfg/sensor/ois_temp_cali.json
+
+#SMB
+    chown system system /proc/smb/ScreenComm
+    chmod 0660 /proc/smb/ScreenComm
+
+    chmod 0660 /dev/spm
+    chown system system /dev/spm
+
+#intsense bokeh use start
+on post-fs-data
+    mkdir /data/vendor/camera 0777 system camera
+    mkdir /data/vendor/camera/model 0777 system camera
+    mkdir /data/vendor/camera/model/dof_model 0777 system camera
+    mkdir /data/vendor/camera/model/rt_model 0777 system camera
+    mkdir /data/vendor/camera/dof_mecp 0777 system camera
+    chown system system /data/vendor/camera/com.xiaomi.dcal.wd.data
+    chown system system /data/vendor/camera/com.xiaomi.dcal.wu.data
+    chmod 0777 /data/vendor/camera/com.xiaomi.dcal.wd.data
+    chmod 0777 /data/vendor/camera/com.xiaomi.dcal.wu.data
+    copy /vendor/etc/camera/model/dof_model/capture_model /data/vendor/camera/model/dof_model/capture_model
+    copy /vendor/etc/camera/model/dof_model/capture_cache /data/vendor/camera/model/dof_model/capture_cache
+    copy /vendor/etc/camera/model/dof_model/capture_policy /data/vendor/camera/model/dof_model/capture_policy
+    copy /vendor/etc/camera/model/rt_model/preview_cache /data/vendor/camera/model/rt_model/preview_cache
+    copy /vendor/etc/camera/model/rt_model/preview_model /data/vendor/camera/model/rt_model/preview_model
+    copy /vendor/etc/camera/model/rt_model/preview_policy /data/vendor/camera/model/rt_model/preview_policy
+    copy /vendor/etc/camera/dof_mecp/dof_mecp.bin /data/vendor/camera/dof_mecp/dof_mecp.bin
+    chmod 0666 /data/vendor/camera/model/dof_model/capture_model
+    chmod 0666 /data/vendor/camera/model/dof_model/capture_cache
+    chmod 0666 /data/vendor/camera/model/dof_model/capture_policy
+    chmod 0666 /data/vendor/camera/model/rt_model/preview_cache
+    chmod 0666 /data/vendor/camera/model/rt_model/preview_model
+    chmod 0666 /data/vendor/camera/model/rt_model/preview_policy
+    chmod 0666 /data/vendor/camera/dof_mecp/dof_mecp.bin
+
+#dual calib
+    chmod 0777 /mnt/vendor/persist/camera/rear_dc_cal_wd.bin
+    chmod 0777 /mnt/vendor/persist/camera/rear_dc_cal_wu.bin
+    chmod 0777 /data/vendor/camera/rear_dc_cal_wd.bin
+    chmod 0777 /data/vendor/camera/rear_dc_cal_wu.bin
+    restorecon /mnt/vendor/persist/camera/rear_dc_cal_wd.bin
+    restorecon /mnt/vendor/persist/camera/rear_dc_cal_wu.bin
+    chmod 0777 /vendor/etc/camera/com.xiaomi.dcal.wd.golden
+    chmod 0777 /vendor/etc/camera/com.xiaomi.dcal.wu.golden
+
+#camerabooster
+    mkdir /odm/etc/camera 0777 system camera
+    copy /vendor/odm/etc/camera/cameraopt.json /odm/etc/camera/cameraopt.json
+
+#intsense bokeh use end
+
+
+on init
+    # Refer to http://source.android.com/devices/tech/storage/index.html
+    # It said, "Starting in Android 4.4, multiple external storage devices are surfaced to developers through
+    #           Context.getExternalFilesDirs(), Context.getExternalCacheDirs(), and Context.getObbDirs().
+    #           External storage devices surfaced through these APIs must be a semi-permanent part of the device (such as an SD card slot in a battery compartment).
+    #           Developers expect data stored in these locations to be available over long periods of time."
+    # Therefore, if the target doesn't support sd hot-plugging (Ex: the SD card slot in a battery compartment), we need to export SECONDARY_STORAGE in 'boot' section
+    #
+    # export SECONDARY_STORAGE /storage/sdcard1
+
+service fuse_usbotg /system/bin/sdcard -u 1023 -g 1023 -w 1023 -d /mnt/media_rw/usbotg /storage/usbotg
+    class late_start
+    disabled
+
+# start mmstat
+on property:sys.boot_completed=1
+    mkdir /sys/kernel/tracing/instances/mmstat 711
+    write /sys/kernel/tracing/instances/mmstat/tracing_on 0
+    write /sys/kernel/tracing/instances/mmstat/buffer_size_kb 16
+    write /sys/kernel/tracing/instances/mmstat/events/mmstat/enable 1
+    write /sys/kernel/tracing/instances/mmstat/tracing_on 1
+
+#+ExtR HTH-404417 add by longcheer, 20240512, support single sim
+on property:ro.boot.multisim=ss
+    #setprop ro.boot.product.hardware.sku ${ro.boot.multisim}
+    setprop persist.radio.multisim.config ${ro.boot.multisim}
+    setprop ro.boot.opt_sim_count 1
+    setprop ro.vendor.miui.singlesim 1
+    setprop ro.telephony.sim.count 1
+    setprop ro.miui.singlesim 1
+on property:ro.boot.multisim=dsds
+    #setprop ro.boot.product.hardware.sku ${ro.boot.multisim}
+    setprop persist.radio.multisim.config ${ro.boot.multisim}
+    setprop ro.boot.opt_sim_count 2
+    setprop ro.telephony.sim.count 2
+    setprop ro.vendor.miui.singlesim 0
+    setprop ro.miui.singlesim 0
+#-ExtR HTH-404417 add by longcheer, 20240512, support single sim
+
+on init
+    insmod /vendor/lib/modules/millet_core.ko
+    insmod /vendor/lib/modules/binder_gki.ko
+    insmod /vendor/lib/modules/millet_binder.ko
+    insmod /vendor/lib/modules/millet_hs.ko
+    insmod /vendor/lib/modules/millet_pkg.ko
+    insmod /vendor/lib/modules/millet_sig.ko
+    insmod /vendor/lib/modules/millet_oem_cgroup.ko

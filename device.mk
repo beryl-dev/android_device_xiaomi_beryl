@@ -61,7 +61,15 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fstab.mt6855 \
     fstab.mt6855.vendor_ramdisk \
-    init.mt6855.usb.rc
+    init.cgroup.rc \
+    init.connectivity.rc \
+    init.modem.rc \
+    init.mt6855.rc \
+    init.mt6855.usb.rc \
+    init.mtkgki.rc \
+    init.project.rc \
+    init.sensor_2_0.rc \
+    ueventd.mt6855.rc
 
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
