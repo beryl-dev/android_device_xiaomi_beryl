@@ -54,7 +54,8 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH)
+    $(LOCAL_PATH) \
+    hardware/mediatek
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/xiaomi/beryl/beryl-vendor.mk)
