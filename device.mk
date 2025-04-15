@@ -44,6 +44,11 @@ AB_OTA_POSTINSTALL_CONFIG += \
 # API levels
 PRODUCT_SHIPPING_API_LEVEL := 34
 
+# FastbootD
+PRODUCT_PACKAGES += \
+    android.hardware.fastboot@1.1-impl.custom \
+    fastbootd
+
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health-service.mediatek \
