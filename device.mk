@@ -44,6 +44,11 @@ AB_OTA_POSTINSTALL_CONFIG += \
 # API levels
 PRODUCT_SHIPPING_API_LEVEL := 34
 
+# Init
+PRODUCT_PACKAGES += \
+    fstab.mt6855 \
+    fstab.mt6855.vendor_ramdisk
+
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
