@@ -44,6 +44,11 @@ AB_OTA_POSTINSTALL_CONFIG += \
 # API levels
 PRODUCT_SHIPPING_API_LEVEL := 34
 
+# Health
+PRODUCT_PACKAGES += \
+    android.hardware.health-service.mediatek \
+    android.hardware.health-service.mediatek-recovery
+
 # Init
 PRODUCT_PACKAGES += \
     fstab.mt6855 \
