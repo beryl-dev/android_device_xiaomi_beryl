@@ -71,6 +71,9 @@ PRODUCT_PACKAGES += \
     init.sensor_2_0.rc \
     ueventd.mt6855.rc
 
+PRODUCT_PACKAGES += \
+    init.recovery.mt6855.rc
+
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
