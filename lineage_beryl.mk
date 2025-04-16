@@ -23,6 +23,5 @@ PRODUCT_MANUFACTURER := xiaomi
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="beryl-user 15 AP3A.240905.015.A2 OS2.0.3.0.VOQINXM release-keys"
-
-BUILD_FINGERPRINT := Redmi/beryl/beryl:12/SP1A.210812.016/OS2.0.3.0.VOQINXM:user/release-keys
+    BuildDesc="beryl-user 15 AP3A.240905.015.A2 OS2.0.3.0.VOQINXM release-keys" \
+    BUILDFINGERPRINT=Redmi/beryl/beryl:12/SP1A.210812.016/OS2.0.3.0.VOQINXM:user/release-keys
