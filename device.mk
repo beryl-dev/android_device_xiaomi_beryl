@@ -74,6 +74,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     init.recovery.mt6855.rc
 
+# Modules
+PRODUCT_PACKAGES += \
+    init.insmod.sh \
+    init.insmod.mt6855.cfg
+
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
