@@ -58,6 +58,9 @@ function blob_fixup {
         system_ext/priv-app/ImsService/ImsService.apk)
             apktool_patch "${2}" "${MY_DIR}/blob-patches/ImsService.patch" -r
             ;;
+        system_ext/lib64/libsink.so)
+            "$PATCHELF" --add-needed "libaudioclient_shim.so" "$2"
+            ;;
         vendor/bin/hw/android.hardware.media.c2@1.2-mediatek-64b)
             "$PATCHELF" --add-needed "libstagefright_foundation-v33.so" "$2"
             ;;
