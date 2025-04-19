@@ -1,8 +1,7 @@
 #!/bin/bash
 #
-# Copyright (C) 2016 The CyanogenMod Project
-# Copyright (C) 2017-2020 The LineageOS Project
-#
+# SPDX-FileCopyrightText: 2016 The CyanogenMod Project
+# SPDX-FileCopyrightText: 2017-2024 The LineageOS Project
 # SPDX-License-Identifier: Apache-2.0
 #
 
@@ -19,6 +18,10 @@ ANDROID_ROOT="${MY_DIR}/../../.."
 
 export TARGET_ENABLE_CHECKELF=true
 
+# If XML files don't have comments before the XML header, use this flag
+# Can still be used with broken XML files by using blob_fixup
+export TARGET_DISABLE_XML_FIXING=true
+
 HELPER="${ANDROID_ROOT}/tools/extract-utils/extract_utils.sh"
 if [ ! -f "${HELPER}" ]; then
     echo "Unable to find helper script at ${HELPER}"
@@ -29,24 +32,29 @@ source "${HELPER}"
 # Default to sanitizing the vendor folder before extraction
 CLEAN_VENDOR=true
 
+ONLY_FIRMWARE=
 KANG=
 SECTION=
 
 while [ "${#}" -gt 0 ]; do
     case "${1}" in
-        -n | --no-cleanup )
-                CLEAN_VENDOR=false
-                ;;
-        -k | --kang )
-                KANG="--kang"
-                ;;
-        -s | --section )
-                SECTION="${2}"; shift
-                CLEAN_VENDOR=false
-                ;;
-        * )
-                SRC="${1}"
-                ;;
+        --only-firmware)
+            ONLY_FIRMWARE=true
+            ;;
+        -n | --no-cleanup)
+            CLEAN_VENDOR=false
+            ;;
+        -k | --kang)
+            KANG="--kang"
+            ;;
+        -s | --section)
+            SECTION="${2}"
+            shift
+            CLEAN_VENDOR=false
+            ;;
+        *)
+            SRC="${1}"
+            ;;
     esac
     shift
 done
@@ -59,33 +67,51 @@ function blob_fixup {
     case "$1" in
         system_ext/priv-app/ImsService/ImsService.apk)
             apktool_patch "${2}" "${MY_DIR}/blob-patches/ImsService.patch" -r
+            [ "$2" = "" ] && return 0
             ;;
         system_ext/lib64/libsink.so)
             "$PATCHELF" --add-needed "libaudioclient_shim.so" "$2"
+            [ "$2" = "" ] && return 0
             ;;
         vendor/bin/hw/android.hardware.media.c2@1.2-mediatek-64b)
             "$PATCHELF" --add-needed "libstagefright_foundation-v33.so" "$2"
+            [ "$2" = "" ] && return 0
             ;;
         vendor/lib64/hw/android.hardware.thermal@2.0-impl.so)
             "${PATCHELF}" --replace-needed "libutils.so" "libutils-v32.so" "${2}"
+            [ "$2" = "" ] && return 0
             ;;
         vendor/lib64/mt6855/libaalservice.so|\
         vendor/bin/mnld)
             "$PATCHELF" --add-needed "android.hardware.sensors@1.0-convert-shared.so" "$2"
+            [ "$2" = "" ] && return 0
             ;;
         vendor/lib64/hw/mt6855/vendor.mediatek.hardware.pq@2.15-impl.so)
             "$PATCHELF" --replace-needed "libutils.so" "libutils-v32.so" "$2"
             "$PATCHELF" --add-needed "android.hardware.sensors@1.0-convert-shared.so" "$2"
+            [ "$2" = "" ] && return 0
             ;;
         vendor/lib*/libmtkcam_stdutils.so)
             "${PATCHELF}" --replace-needed "libutils.so" "libutils-v32.so" "$2"
+            [ "$2" = "" ] && return 0
+            ;;
+        *)
+            return 1
             ;;
     esac
+
+    return 0
+}
+
+function blob_fixup_dry() {
+    blob_fixup "${1}" ""
 }
 
 # Initialize the helper
 setup_vendor "${DEVICE}" "${VENDOR}" "${ANDROID_ROOT}" false "${CLEAN_VENDOR}"
 
-extract "${MY_DIR}/proprietary-files.txt" "${SRC}" "${KANG}" --section "${SECTION}"
+if [ -z "${ONLY_FIRMWARE}" ]; then
+    extract "${MY_DIR}/proprietary-files.txt" "${SRC}" "${KANG}" --section "${SECTION}"
+fi
 
 "${MY_DIR}/setup-makefiles.sh"
