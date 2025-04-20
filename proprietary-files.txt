@@ -160,6 +160,7 @@ vendor/etc/audio_param/VoWVoiceCommand_AudioParam.xml
 vendor/etc/audio_param/VoWVoiceCommand_ParamUnitDesc.xml
 
 # Bluetooth
+<<<<<<< HEAD
 vendor/bin/hw/android.hardware.bluetooth@1.1-service-mediatek
 vendor/etc/init/android.hardware.bluetooth@1.1-service-mediatek.rc
 vendor/lib64/hw/android.hardware.bluetooth@1.1-impl-mediatek.so
@@ -517,6 +518,7 @@ vendor/lib64/mt6855/imx882_ofilm_main_ii_mipi_raw_india_tuning.so;SYMLINK=vendor
 vendor/lib64/mt6855/imx882_ofilm_main_ii_mipi_raw_IdxMgr.so;SYMLINK=vendor/lib64/imx882_ofilm_main_ii_mipi_raw_IdxMgr.so
 vendor/lib64/mt6855/imx882_ofilm_main_ii_mipi_raw_global_IdxMgr.so;SYMLINK=vendor/lib64/imx882_ofilm_main_ii_mipi_raw_global_IdxMgr.so
 vendor/lib64/mt6855/imx882_ofilm_main_ii_mipi_raw_tuning.so;SYMLINK=vendor/lib64/imx882_ofilm_main_ii_mipi_raw_tuning.so
+vendor/lib64/mt6855/liblpcnr.so;SYMLINK=vendor/lib64/liblpcnr.so
 vendor/lib64/libanc_dc_base.so
 vendor/lib64/libanc_fullhdr.so
 vendor/lib64/libanc_hdr.so
@@ -525,6 +527,8 @@ vendor/lib64/libanc_night.so
 vendor/lib64/libanc_night_preview.so
 vendor/lib64/libanc_single_bokeh.so
 vendor/lib64/libanc_single_rt_bokeh.so
+vendor/lib64/lc_algoutils.so
+vendor/lib64/libwa_rtdof.so
 vendor/lib64/libc++_shared.so
 vendor/lib64/libcam.seninfn3d.so
 vendor/lib64/libcamera2ndk_vendor.so
@@ -1958,6 +1962,19 @@ vendor/lib64/libmtkcam_pipelinepolicy-aov.so
 vendor/lib64/libmtkisp_metadata.so
 vendor/lib64/libOpenCL.so
 vendor/lib64/libSQLiteModule_VER_ALL.so
+vendor/lib64/libwa_cap_refocus.so
+vendor/lib64/libremosaic_wrapper.so
+vendor/lib64/libwa_rtdof.so
+vendor/lib64/vendor.mediatek.hardware.camera.atms@1.0.so
+vendor/lib64/vendor.mediatek.hardware.camera.bgservice@1.0.so
+vendor/lib64/vendor.mediatek.hardware.camera.bgservice@1.1.so
+vendor/lib64/vendor.mediatek.hardware.camera.ccap@1.0.so
+vendor/lib64/vendor.mediatek.hardware.camera.frhandler@1.0.so
+vendor/lib64/vendor.mediatek.hardware.camera.isphal@1.0.so
+vendor/lib64/vendor.mediatek.hardware.camera.isphal@1.1.so
+vendor/lib64/vendor.mediatek.hardware.camera.lomoeffect@1.0.so
+vendor/lib64/vendor.mediatek.hardware.camera.postproc@1.0.so
+vendor/lib64/vendor.mediatek.hardware.camera.security@1.0.so
 vendor/lib64/mt6855/lib_bsscore.so;SYMLINK=vendor/lib64/lib_bsscore.so
 vendor/lib64/mt6855/lib3a.ae.so;SYMLINK=vendor/lib64/lib3a.ae.so
 vendor/lib64/mt6855/lib3a.af.assist.utils.so;SYMLINK=vendor/lib64/lib3a.af.assist.utils.so
@@ -2124,6 +2141,7 @@ vendor/lib64/mt6855/libmtkcam.logicalmodule.so;SYMLINK=vendor/lib64/libmtkcam.lo
 vendor/lib64/mt6855/libmtkcam.featurepipe.streaming.so;SYMLINK=vendor/lib64/libmtkcam.featurepipe.streaming.so
 vendor/lib64/mt6855/libmtkcam.featurepipe.depthmap.so;SYMLINK=vendor/lib64/libmtkcam.featurepipe.depthmap.so
 vendor/lib64/mt6855/libmtkcam.featurepipe.capture.so;SYMLINK=vendor/lib64/libmtkcam.featurepipe.capture.so
+vendor/lib64/libmtkcam.MITPS.so
 vendor/lib64/mt6855/libpda_usdriver.so;SYMLINK=vendor/lib64/libpda_usdriver.so
 vendor/lib64/mt6855/libSonyIMX338PdafLibrary.so;SYMLINK=vendor/lib64/libSonyIMX338PdafLibrary.so
 vendor/lib64/mt6855/libSonyIMX230PdafLibraryWrapper.so;SYMLINK=vendor/lib64/libSonyIMX230PdafLibraryWrapper.so
@@ -2250,6 +2268,7 @@ vendor/lib64/mt6855/libdip_postproc.so;SYMLINK=vendor/lib64/libdip_postproc.so
 vendor/lib64/libaal_cust.so
 vendor/lib64/libaal_key.so
 vendor/lib64/libaal_mtk.so
+vendor/lib64/libcom.xiaomi.pluginutils.so
 vendor/lib64/libdre.so
 vendor/lib64/libdre.so
 vendor/lib64/libDefaultFpsActor.so
@@ -2267,18 +2286,26 @@ vendor/lib64/libion_ulit.so
 vendor/lib64/libladder.so
 vendor/lib64/libmml.so
 vendor/lib64/libpqframework.so
+vendor/lib64/librpc.so
+vendor/lib64/libTrueSight.so
 vendor/lib64/libudf.so
 vendor/lib64/mt6855/libaalservice.so;SYMLINK=vendor/lib64/libaalservice.so
 vendor/lib64/mt6855/libaal_cust_func.so;SYMLINK=vendor/lib64/libaal_cust_func.so
 vendor/lib64/mt6855/libaiselector.so;SYMLINK=vendor/lib64/libaiselector.so
 vendor/lib64/mt6855/libdpframework.so;SYMLINK=vendor/lib64/libdpframework.so
+vendor/lib64/mt6855/libimageio_plat_drv.so;SYMLINK=vendor/lib64/libimageio_plat_drv.so
 vendor/lib64/mt6855/libmtk_drvb.so;SYMLINK=vendor/lib64/libmtk_drvb.so
+vendor/lib64/mt6855/libmsnr.so;SYMLINK=vendor/lib64/libmsnr.so
 vendor/lib64/mt6855/libnir_neon_driver.so;SYMLINK=vendor/lib64/libnir_neon_driver.so
 vendor/lib64/mt6855/libpqpconfig.so;SYMLINK=vendor/lib64/libpqpconfig.so
 vendor/lib64/mt6855/libpq_prot.so;SYMLINK=vendor/lib64/libpq_prot.so
 vendor/lib64/mt6855/libmemtrack_GL.so;SYMLINK=vendor/lib64/libmemtrack_GL.so
 vendor/lib64/mt6855/libpqparamparser.so;SYMLINK=vendor/lib64/libpqparamparser.so
 vendor/lib64/mt6855/libpq_cust_base.so;SYMLINK=vendor/lib64/libpq_cust_base.so
+vendor/lib64/mt6855/libsrv_um.so;SYMLINK=vendor/lib64/libsrv_um.so
+vendor/lib64/mt6855/libufwriter.so;SYMLINK=vendor/lib64/libufwriter.so
+vendor/lib64/mt6855/libusc.so;SYMLINK=vendor/lib64/libusc.so
+vendor/lib64/libpixelflinger.so
 vendor/lib64/vendor.mediatek.hardware.composer_ext@1.0.so
 vendor/lib64/vendor.mediatek.hardware.mmagent@1.0.so
 vendor/lib64/vendor.mediatek.hardware.mmagent@1.1.so
@@ -2311,6 +2338,7 @@ vendor/lib64/mediadrm/libwvdrmengine.so
 # Fingerprint
 vendor/lib64/hw/fingerprint.goodix_fod.default.so
 vendor/lib64/hw/fingerprint.jiiov.default.so
+vendor/lib64/anc.hal.so
 vendor/lib64/libgf_hal.so
 
 # Fuelgauge
@@ -2442,6 +2470,7 @@ vendor/lib64/libperfctl_vendor.so
 vendor/lib64/libpower_timer.so
 vendor/lib64/libpowerhal.so
 vendor/lib64/libpowerhalwrap_vendor.so
+vendor/lib64/vendor.mediatek.hardware.power@1.1.so
 vendor/lib64/vendor.mediatek.hardware.power@2.0.so
 
 # Radio
@@ -2686,6 +2715,11 @@ vendor/mitee/ta/a734eed9-d6a1-4244-aa507c99719e7b7f.ta
 vendor/mitee/ta/dba51a17-0563-11e7-93b16fa7b0071a51.ta
 vendor/mitee/ta/e5140b33-76fa-4c63-ab18062caab2fb5c.ta
 vendor/mitee/ta/e97c270e-a5c4-4c58-bcd3384a2fa2539e.ta
+
+# USB
+vendor/bin/hw/android.hardware.usb@1.2-service-mediatekv2
+vendor/etc/init/android.hardware.usb@1.2-service-mediatekv2.rc
+vendor/etc/vintf/manifest/android.hardware.usb@1.2-service-mediatekv2.xml
 
 # Wi-Fi
 vendor/bin/wlan_assistant
