@@ -113,6 +113,9 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.5.vendor \
     android.hardware.camera.provider@2.6.vendor
 
+PRODUCT_PACKAGES += \
+    libunwindstack.vendor
+
 # ConsumerIr
 PRODUCT_PACKAGES += \
     android.hardware.ir-service.example
