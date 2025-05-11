@@ -114,6 +114,7 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.6.vendor
 
 PRODUCT_PACKAGES += \
+    libexpat.vendor \
     libunwindstack.vendor
 
 # ConsumerIr
