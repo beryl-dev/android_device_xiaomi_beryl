@@ -87,6 +87,10 @@ function blob_fixup {
             "$PATCHELF" --add-needed "libstagefright_foundation-v33.so" "$2"
             [ "$2" = "" ] && return 0
             ;;
+        vendor/bin/hw/vendor.mediatek.hardware.pq@2.2-service)
+            "${PATCHELF}" --replace-needed "libutils.so" "libutils-v32.so" "${2}"
+            [ "$2" = "" ] && return 0
+            ;;
         vendor/etc/init/android.hardware.neuralnetworks-shim-service-mtk.rc)
             sed -i 's/start/enable/' "$2"
             [ "$2" = "" ] && return 0
