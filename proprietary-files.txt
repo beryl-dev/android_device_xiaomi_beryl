@@ -2453,6 +2453,45 @@ vendor/lib64/libnvram_sec.so
 vendor/lib64/vendor.mediatek.hardware.nvram@1.0.so
 vendor/lib64/vendor.mediatek.hardware.nvram@1.1.so
 
+# Neural networks
+vendor/bin/hw/android.hardware.neuralnetworks-shim-service-mtk
+vendor/etc/init/android.hardware.neuralnetworks-shim-service-mtk.rc
+vendor/etc/vintf/manifest/android.hardware.neuralnetworks-shim-service-mtk.xml
+vendor/etc/vintf/manifest/manifest_apuware_apusys.xml
+vendor/etc/vintf/manifest/manifest_apuware_hmp.xml
+vendor/etc/vintf/manifest/manifest_apuware_utils.xml
+vendor/etc/nnapi_powerhal.json
+vendor/lib64/mt6855/libneuralnetworks_sl_driver_mtk_prebuilt.so;DISABLE_CHECKELF;SYMLINK=vendor/lib64/libneuralnetworks_sl_driver_mtk_prebuilt.so
+vendor/lib64/mt6855/libneuron_adapter_mgvi.so;DISABLE_CHECKELF;SYMLINK=vendor/lib64/libneuron_adapter_mgvi.so
+vendor/lib64/mt6855/libneuron_runtime.5.so;SYMLINK=vendor/lib64/libneuron_runtime.5.so
+vendor/lib64/mt6855/libnir_neon_driver.so;SYMLINK=vendor/lib64/libnir_neon_driver.so
+vendor/lib64/APUWareApusysServer.so
+vendor/lib64/APUWareHmpServer.so
+vendor/lib64/APUWareUtilsServer.so;DISABLE_CHECKELF
+vendor/lib64/libapu_mdw.so
+vendor/lib64/libapu_mdw_batch.so
+vendor/lib64/libapusys.so
+vendor/lib64/libapusys_edma.so
+vendor/lib64/libarmnn.so
+vendor/lib64/libarmnn_ndk.mtk.vndk.so
+vendor/lib64/libcmdl.so
+vendor/lib64/libcmdl_ndk.mtk.vndk.so
+vendor/lib64/libneuroeara.so
+vendor/lib64/libneuron_graph_delegate.mtk.so
+vendor/lib64/libneuron_runtime.6.so
+vendor/lib64/libneuron_platform.so
+vendor/lib64/libneuropilot_hal_utils.so
+vendor/lib64/libwa_dof.so
+vendor/lib64/libnir_neon_driver_ndk.mtk.vndk.so;FIX_SONAME
+vendor/lib64/libtflite_mtk.so;DISABLE_CHECKELF
+vendor/lib64/vendor.mediatek.hardware.apuware.apusys@2.0.so
+vendor/lib64/vendor.mediatek.hardware.apuware.apusys@2.1.so
+vendor/lib64/vendor.mediatek.hardware.apuware.hmp@1.0.so
+vendor/lib64/vendor.mediatek.hardware.apuware.utils@2.0.so
+vendor/lib64/vendor.mediatek.hardware.neuropilot.agent@1.0.so
+vendor/lib64/vendor.mediatek.hardware.neuropilot.agent@1.1.so
+vendor/lib64/vendor.mediatek.hardware.neuropilot.agent@1.2.so
+
 # Perf
 vendor/bin/hw/vendor.mediatek.hardware.mtkpower@1.0-service
 vendor/etc/init/vendor.mediatek.hardware.mtkpower@1.0-init.rc
