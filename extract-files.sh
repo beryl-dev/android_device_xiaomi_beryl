@@ -71,7 +71,11 @@ function blob_fixup {
             apktool_patch "${2}" "${MY_DIR}/blob-patches/ImsService.patch" -r
             [ "$2" = "" ] && return 0
             ;;
-        system_ext/lib64/libsink.so)
+        system_ext/lib64/libimsma.so)
+            "${PATCHELF}" --replace-needed "libsink.so" "libsink-mtk.so" "${2}"
+            [ "$2" = "" ] && return 0
+            ;;
+        system_ext/lib64/libsink-mtk.so)
             "$PATCHELF" --add-needed "libaudioclient_shim.so" "$2"
             [ "$2" = "" ] && return 0
             ;;
