@@ -79,6 +79,10 @@ function blob_fixup {
             "$PATCHELF" --add-needed "libaudioclient_shim.so" "$2"
             [ "$2" = "" ] && return 0
             ;;
+        vendor/bin/hw/android.hardware.security.keymint@1.0-service.mitee)
+            "$PATCHELF" --replace-needed "android.hardware.security.keymint-V1-ndk_platform.so" "android.hardware.security.keymint-V3-ndk.so" "$2"
+            [ "$2" = "" ] && return 0
+            ;;
         vendor/bin/hw/android.hardware.media.c2@1.2-mediatek-64b)
             "$PATCHELF" --add-needed "libstagefright_foundation-v33.so" "$2"
             [ "$2" = "" ] && return 0
