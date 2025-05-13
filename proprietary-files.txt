@@ -160,7 +160,6 @@ vendor/etc/audio_param/VoWVoiceCommand_AudioParam.xml
 vendor/etc/audio_param/VoWVoiceCommand_ParamUnitDesc.xml
 
 # Bluetooth
-<<<<<<< HEAD
 vendor/bin/hw/android.hardware.bluetooth@1.1-service-mediatek
 vendor/etc/init/android.hardware.bluetooth@1.1-service-mediatek.rc
 vendor/lib64/hw/android.hardware.bluetooth@1.1-impl-mediatek.so
@@ -2236,9 +2235,6 @@ vendor/lib64/hw/consumerir.default.so
 vendor/bin/conninfra_loader
 vendor/bin/wmt_launcher
 vendor/bin/wmt_loader
-vendor/firmware/soc2_2_ram_mcu_1b_1_hdr.bin
-vendor/firmware/soc2_2_ram_mcu_1c_1_hdr.bin
-vendor/firmware/WMT_SOC.cfg
 
 # Chipinfo
 vendor/bin/chipinfo
@@ -2340,6 +2336,44 @@ vendor/lib64/hw/fingerprint.goodix_fod.default.so
 vendor/lib64/hw/fingerprint.jiiov.default.so
 vendor/lib64/anc.hal.so
 vendor/lib64/libgf_hal.so
+
+# Firmware
+vendor/firmware/BT_FW.cfg
+vendor/firmware/Conf_MultipleTest_ft3519t.ini
+vendor/firmware/fm_cust.cfg
+vendor/firmware/focaltech_ts_fw_samsung_ft3519t.bin
+vendor/firmware/fs1kls.fsm
+vendor/firmware/fs1xxx.fsm
+vendor/firmware/mt6627_fm_v1_coeff.bin
+vendor/firmware/mt6627_fm_v1_patch.bin
+vendor/firmware/mt6630_fm_v1_coeff.bin
+vendor/firmware/mt6630_fm_v1_patch.bin
+vendor/firmware/mt6630_fm_v2_coeff.bin
+vendor/firmware/mt6630_fm_v2_coeff_tx.bin
+vendor/firmware/mt6630_fm_v2_patch.bin
+vendor/firmware/mt6630_fm_v2_patch_tx.bin
+vendor/firmware/mt6631_fm_v1_coeff.bin
+vendor/firmware/mt6631_fm_v1_patch.bin
+vendor/firmware/mt6632_fm_v1_coeff.bin
+vendor/firmware/mt6632_fm_v1_patch.bin
+vendor/firmware/mt6635_fm_v1_coeff.bin
+vendor/firmware/mt6635_fm_v1_patch.bin
+vendor/firmware/remoteproc_scp
+vendor/firmware/rgx.fw
+vendor/firmware/rgx.sh
+vendor/firmware/sipa.bin
+vendor/firmware/soc2_2_ram_bt_1b_1_hdr.bin
+vendor/firmware/soc2_2_ram_bt_1c_1_hdr.bin
+vendor/firmware/soc2_2_ram_mcu_1b_1_hdr.bin
+vendor/firmware/soc2_2_ram_mcu_1c_1_hdr.bin
+vendor/firmware/soc2_2_ram_wifi_1b_1_hdr.bin
+vendor/firmware/soc2_2_ram_wifi_1c_1_hdr.bin
+vendor/firmware/soc_fm_v1_coeff.bin
+vendor/firmware/soc_fm_v1_patch.bin
+vendor/firmware/wifi.cfg
+vendor/firmware/WIFI_RAM_CODE_soc2_2_1b_1.bin
+vendor/firmware/WIFI_RAM_CODE_soc2_2_1c_1.bin
+vendor/firmware/WMT_SOC.cfg
 
 # Fuelgauge
 vendor/bin/fuelgauged
@@ -2682,7 +2716,6 @@ vendor/lib64/libvpu.so
 vendor/lib64/libvpu5.so
 
 # Sensors
-vendor/firmware/remoteproc_scp
 vendor/lib64/hw/sensors.mediatek.V2.0.so;SYMLINK=vendor/lib64/hw/sensors.mt6855.so
 vendor/lib64/libhfmanager.so
 vendor/lib64/libhwm.so
@@ -2787,8 +2820,3 @@ vendor/etc/vintf/manifest/android.hardware.usb@1.2-service-mediatekv2.xml
 vendor/bin/wlan_assistant
 vendor/etc/init/wlan_assistant.rc
 vendor/lib64/libwifi-hal.so:vendor/lib64/libwifi-hal-mtk.so;FIX_SONAME
-vendor/firmware/soc2_2_ram_wifi_1b_1_hdr.bin
-vendor/firmware/soc2_2_ram_wifi_1c_1_hdr.bin
-vendor/firmware/wifi.cfg
-vendor/firmware/WIFI_RAM_CODE_soc2_2_1b_1.bin
-vendor/firmware/WIFI_RAM_CODE_soc2_2_1c_1.bin
