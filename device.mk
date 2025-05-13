@@ -370,6 +370,8 @@ PRODUCT_PACKAGES += \
 
 # VNDK
 PRODUCT_PACKAGES += \
+    libbinder-v32 \
+    libhidlbase-v32 \
     libstagefright_foundation-v33 \
     libutils-v32
 

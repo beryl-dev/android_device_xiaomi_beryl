@@ -89,6 +89,8 @@ function blob_fixup {
             [ "$2" = "" ] && return 0
             ;;
         vendor/bin/hw/vendor.mediatek.hardware.pq@2.2-service)
+            "${PATCHELF}" --replace-needed "libbinder.so" "libbinder-v32.so" "${2}"
+            "${PATCHELF}" --replace-needed "libhidlbase.so" "libhidlbase-v32.so" "${2}"
             "${PATCHELF}" --replace-needed "libutils.so" "libutils-v32.so" "${2}"
             [ "$2" = "" ] && return 0
             ;;
