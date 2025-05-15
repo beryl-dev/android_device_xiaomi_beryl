@@ -88,12 +88,6 @@ function blob_fixup {
             "$PATCHELF" --add-needed "libstagefright_foundation-v33.so" "$2"
             [ "$2" = "" ] && return 0
             ;;
-        vendor/bin/hw/vendor.mediatek.hardware.pq@2.2-service)
-            "${PATCHELF}" --replace-needed "libbinder.so" "libbinder-v32.so" "${2}"
-            "${PATCHELF}" --replace-needed "libhidlbase.so" "libhidlbase-v32.so" "${2}"
-            "${PATCHELF}" --replace-needed "libutils.so" "libutils-v32.so" "${2}"
-            [ "$2" = "" ] && return 0
-            ;;
         vendor/etc/init/android.hardware.neuralnetworks-shim-service-mtk.rc)
             sed -i 's/start/enable/' "$2"
             [ "$2" = "" ] && return 0
@@ -104,11 +98,6 @@ function blob_fixup {
             ;;
         vendor/lib64/mt6855/libaalservice.so|\
         vendor/bin/mnld)
-            "$PATCHELF" --add-needed "android.hardware.sensors@1.0-convert-shared.so" "$2"
-            [ "$2" = "" ] && return 0
-            ;;
-        vendor/lib64/hw/mt6855/vendor.mediatek.hardware.pq@2.15-impl.so)
-            "$PATCHELF" --replace-needed "libutils.so" "libutils-v32.so" "$2"
             "$PATCHELF" --add-needed "android.hardware.sensors@1.0-convert-shared.so" "$2"
             [ "$2" = "" ] && return 0
             ;;
