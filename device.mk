@@ -317,6 +317,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     PowerOffAlarm
 
+# Pq
+PRODUCT_PACKAGES += \
+    libpqparamparser
+
 # Protobuf
 PRODUCT_PACKAGES += \
     libprotobuf-cpp-lite-3.9.1-vendorcompat
