@@ -2240,9 +2240,7 @@ vendor/etc/init/chipinfo_init.rc
 
 # Display
 vendor/bin/hw/mt6855/android.hardware.graphics.allocator@4.0-service-mediatek.mt6855;SYMLINK=vendor/bin/hw/android.hardware.graphics.allocator@4.0-service-mediatek
-vendor/bin/hw/vendor.mediatek.hardware.pq@2.2-service
 vendor/etc/init/android.hardware.graphics.allocator@4.0-service-mediatek.rc
-vendor/etc/init/vendor.mediatek.hardware.pq@2.2-service.rc
 vendor/lib64/egl/libGLES_meow.so
 vendor/lib64/egl/libMEOW_data.so
 vendor/lib64/egl/libMEOW_gift.so
@@ -2254,7 +2252,6 @@ vendor/lib64/egl/mt6855/libGLESv1_CM_mtk.so;SYMLINK=vendor/lib64/egl/libGLESv1_C
 vendor/lib64/hw/hwcomposer.mtk_common.so
 vendor/lib64/hw/mt6855/android.hardware.graphics.mapper@4.0-impl-mediatek.so;SYMLINK=vendor/lib64/hw/android.hardware.graphics.mapper@4.0-impl-mediatek.so
 vendor/lib64/hw/mt6855/gralloc.rogue.so;SYMLINK=vendor/lib64/hw/gralloc.rogue.so
-vendor/lib64/hw/mt6855/vendor.mediatek.hardware.pq@2.15-impl.so;SYMLINK=vendor/lib64/hw/vendor.mediatek.hardware.pq@2.15-impl.so
 vendor/lib64/hw/mt6855/vulkan.mtk.so;SYMLINK=vendor/lib64/hw/vulkan.mtk.so
 vendor/lib64/mt6855/libaal_cust_func.so;SYMLINK=vendor/lib64/libaal_cust_func.so
 vendor/lib64/mt6855/libdip_drv.so;SYMLINK=vendor/lib64/libdip_drv.so
@@ -2279,7 +2276,6 @@ vendor/lib64/libion_mtk.so
 vendor/lib64/libion_ulit.so
 vendor/lib64/libladder.so
 vendor/lib64/libmml.so
-vendor/lib64/libpqframework.so
 vendor/lib64/librpc.so
 vendor/lib64/libTrueSight.so
 vendor/lib64/libudf.so
@@ -2291,18 +2287,13 @@ vendor/lib64/mt6855/libimageio_plat_drv.so;SYMLINK=vendor/lib64/libimageio_plat_
 vendor/lib64/mt6855/libmtk_drvb.so;SYMLINK=vendor/lib64/libmtk_drvb.so
 vendor/lib64/mt6855/libmsnr.so;SYMLINK=vendor/lib64/libmsnr.so
 vendor/lib64/mt6855/libnir_neon_driver.so;SYMLINK=vendor/lib64/libnir_neon_driver.so
-vendor/lib64/mt6855/libpqpconfig.so;SYMLINK=vendor/lib64/libpqpconfig.so
 vendor/lib64/mt6855/libpq_prot.so;SYMLINK=vendor/lib64/libpq_prot.so
 vendor/lib64/mt6855/libmemtrack_GL.so;SYMLINK=vendor/lib64/libmemtrack_GL.so
-vendor/lib64/mt6855/libpqparamparser.so;SYMLINK=vendor/lib64/libpqparamparser.so
-vendor/lib64/mt6855/libpq_cust_base.so;SYMLINK=vendor/lib64/libpq_cust_base.so
 vendor/lib64/mt6855/libsrv_um.so;SYMLINK=vendor/lib64/libsrv_um.so
 vendor/lib64/mt6855/libufwriter.so;SYMLINK=vendor/lib64/libufwriter.so
 vendor/lib64/mt6855/libusc.so;SYMLINK=vendor/lib64/libusc.so
 vendor/lib64/libpixelflinger.so
 vendor/lib64/vendor.mediatek.hardware.composer_ext@1.0.so
-vendor/lib64/vendor.mediatek.hardware.mmagent@1.0.so
-vendor/lib64/vendor.mediatek.hardware.mmagent@1.1.so
 vendor/lib64/vendor.mediatek.hardware.pq@2.0.so
 vendor/lib64/vendor.mediatek.hardware.pq@2.1.so
 vendor/lib64/vendor.mediatek.hardware.pq@2.10.so
