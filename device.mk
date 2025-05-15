@@ -181,6 +181,7 @@ PRODUCT_PACKAGES += \
     fstab.mt6855.vendor_ramdisk \
     init.cgroup.rc \
     init.connectivity.rc \
+    init.fingerprint.rc \
     init.modem.rc \
     init.mt6855.rc \
     init.mt6855.usb.rc \
