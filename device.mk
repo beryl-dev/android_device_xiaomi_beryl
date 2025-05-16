@@ -148,6 +148,9 @@ PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.3-service.xiaomi
 
 PRODUCT_PACKAGES += \
+    sensors.xiaomi.v2
+
+PRODUCT_PACKAGES += \
     vendor.xiaomi.hardware.fx.tunnel@1.0.vendor:64
 
 # Gatekeeper
