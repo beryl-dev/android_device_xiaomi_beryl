@@ -2733,7 +2733,6 @@ vendor/bin/hw/android.hardware.thermal@2.0-service.mtk
 vendor/bin/mi_thermald
 vendor/bin/thermal_intf
 vendor/etc/init/android.hardware.thermal@2.0-service.mtk.rc
-vendor/etc/init/init.mi_thermald.rc
 vendor/etc/india-thermal-demo.conf
 vendor/etc/thermal-camera.conf
 vendor/etc/thermal-cclassvideo.conf
