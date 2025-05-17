@@ -186,6 +186,7 @@ PRODUCT_PACKAGES += \
     init.cgroup.rc \
     init.connectivity.rc \
     init.fingerprint.rc \
+    init.mi_thermald.rc \
     init.modem.rc \
     init.mt6855.rc \
     init.mt6855.usb.rc \
