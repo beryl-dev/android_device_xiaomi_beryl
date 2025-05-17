@@ -24,6 +24,8 @@ PRODUCT_PACKAGES += \
     android.hardware.boot-service.default_recovery
 
 PRODUCT_PACKAGES += \
+    e2fsck.vendor_ramdisk \
+    fsck.f2fs.vendor_ramdisk \
     checkpoint_gc \
     otapreopt_script \
     update_engine \
