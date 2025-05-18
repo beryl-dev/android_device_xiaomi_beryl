@@ -185,12 +185,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fstab.mt6855 \
     fstab.mt6855.vendor_ramdisk \
-    init.cgroup.rc \
     init.connectivity.rc \
     init.fingerprint.rc \
     init.mi_thermald.rc \
     init.modem.rc \
     init.mt6855.rc \
+    init.mt6855.power.rc \
     init.mt6855.usb.rc \
     init.mtkgki.rc \
     init.project.rc \
