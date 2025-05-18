@@ -131,9 +131,6 @@ BOARD_VENDOR := xiaomi
 # RIL
 ENABLE_VENDOR_RIL_SERVICE := true
 
-# Power
-TARGET_POWERHAL_MODE_EXT := $(DEVICE_PATH)/power/power-mode.cpp
-
 # Properties
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/configs/props/system.prop
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/configs/props/vendor.prop

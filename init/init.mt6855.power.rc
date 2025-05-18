@@ -60,6 +60,9 @@ on boot
     write /dev/cpuctl/background/cpu.uclamp.latency_sensitive 1
 
 on property:sys.boot_completed=1
+    # Enable PowerHAL hint processing
+    setprop vendor.powerhal.init 1
+
     write /sys/block/mmcblk0/queue/iostats 1
     write /sys/block/mmcblk0/queue/read_ahead_kb 512
     write /sys/block/mmcblk0/queue/nr_requests 128

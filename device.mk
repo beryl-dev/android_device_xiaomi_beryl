@@ -316,10 +316,12 @@ PRODUCT_COPY_FILES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power-service-mediatek
+    android.hardware.power-service.lineage-libperfmgr \
+    libmtkperf_client_vendor \
+    libpowerhalwrap_vendor
 
-PRODUCT_PACKAGES += \
-    vendor.mediatek.hardware.mtkpower@1.2.vendor
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
 
 # Power-off Alarm
 PRODUCT_PACKAGES += \
@@ -364,7 +366,9 @@ PRODUCT_SOONG_NAMESPACES += \
     $(DEVICE_PATH) \
     hardware/google/interfaces \
     hardware/google/pixel \
+    hardware/lineage/interfaces/power-libperfmgr \
     hardware/mediatek \
+    hardware/mediatek/libmtkperf_client \
     hardware/xiaomi
 
 # Thermal
