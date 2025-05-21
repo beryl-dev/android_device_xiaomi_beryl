@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2022 The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+
+    <!-- Adjust the icon padding in status bar for rounded corners --> 
+    <dimen name="rounded_corner_content_padding">54.0px</dimen>
+
+</resources>

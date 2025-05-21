@@ -262,6 +262,9 @@ PRODUCT_PACKAGES += \
 
 # Overlays
 PRODUCT_PACKAGES += \
+    FrameworksResOverlayBeryl \
+    SystemUIOverlayBeryl \
+    TelephonyOverlayBeryl \
     WifiResOverlayBeryl
 
 # Partitions
