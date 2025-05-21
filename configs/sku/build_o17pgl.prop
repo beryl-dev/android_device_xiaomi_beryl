@@ -3,3 +3,4 @@ ro.product.odm.brand=POCO
 ro.product.odm.device=citrine
 ro.product.odm.model=2409FPCC4G
 ro.product.odm.name=citrine_p_in_global
+vendor.usb.product_string=POCO M7 Pro 5G
