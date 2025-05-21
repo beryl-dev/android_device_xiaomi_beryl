@@ -267,6 +267,7 @@ PRODUCT_PACKAGES += \
 # Overlays
 PRODUCT_PACKAGES += \
     FrameworksResOverlayBeryl \
+    SettingsOverlayBeryl \
     SystemUIOverlayBeryl \
     TelephonyOverlayBeryl \
     WifiResOverlayBeryl
