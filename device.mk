@@ -363,6 +363,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libaudioclient_shim
 
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/rsc,$(TARGET_COPY_OUT_VENDOR)/etc/rsc)
+
 # Secure Element
 PRODUCT_PACKAGES += \
     android.hardware.secure_element@1.2.vendor
