@@ -194,7 +194,6 @@ PRODUCT_PACKAGES += \
     init.mt6855.rc \
     init.mt6855.power.rc \
     init.mt6855.usb.rc \
-    init.mtkgki.rc \
     init.project.rc \
     init.sensor_2_0.rc \
     ueventd.mt6855.rc
@@ -260,11 +259,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(DEVICE_PATH)/configs/seccomp,$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy) \
     $(call find-copy-subdir-files,*,$(DEVICE_PATH)/configs/media,$(TARGET_COPY_OUT_VENDOR)/etc)
-
-# Modules
-PRODUCT_PACKAGES += \
-    init.insmod.sh \
-    init.insmod.mt6855.cfg
 
 # Neural Networks
 PRODUCT_PACKAGES += \
