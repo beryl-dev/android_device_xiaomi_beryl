@@ -81,6 +81,8 @@ function blob_fixup {
             ;;
         vendor/bin/hw/mt6855/camerahalserver)
             "${PATCHELF}" --replace-needed "libutils.so" "libutils-v32.so" "${2}"
+            "${PATCHELF}" --replace-needed "libbinder.so" "libbinder-v32.so" "${2}"
+            "${PATCHELF}" --replace-needed "libhidlbase.so" "libhidlbase-v32.so" "${2}"
             [ "$2" = "" ] && return 0
             ;;
         vendor/bin/hw/android.hardware.security.keymint@1.0-service.mitee)
