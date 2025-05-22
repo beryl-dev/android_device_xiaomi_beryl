@@ -2416,8 +2416,11 @@ system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml
 system_ext/framework/com.android.hotwordenrollment.common.util.jar
 
 # Kernel Modules (Init)
+vendor/bin/init.insmod.sh
+vendor/etc/init/hw/init.mtkgki.rc
 vendor/etc/init/init.bt_drv.rc
 vendor/etc/init/init.connfem.rc
+vendor/etc/init.insmod.mt6855.cfg
 vendor/etc/init/init.fmradio_drv.rc
 vendor/etc/init/init.gps_drv.rc
 vendor/etc/init/init.wlan_drv.rc
