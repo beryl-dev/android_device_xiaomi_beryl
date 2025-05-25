@@ -83,7 +83,8 @@ function blob_fixup {
             "$PATCHELF" --add-needed "libaudioclient_shim.so" "$2"
             [ "$2" = "" ] && return 0
             ;;
-        vendor/bin/hw/mt6855/camerahalserver)
+        vendor/bin/hw/mt6855/camerahalserver| \
+        vendor/lib64/hw/mt6855/android.hardware.camera.provider@2.6-impl-mediatek.so)
             "${PATCHELF}" --replace-needed "libutils.so" "libutils-v32.so" "${2}"
             "${PATCHELF}" --replace-needed "libbinder.so" "libbinder-v32.so" "${2}"
             "${PATCHELF}" --replace-needed "libhidlbase.so" "libhidlbase-v32.so" "${2}"
@@ -111,8 +112,7 @@ function blob_fixup {
             "$PATCHELF" --add-needed "android.hardware.sensors@1.0-convert-shared.so" "$2"
             [ "$2" = "" ] && return 0
             ;;
-        vendor/lib*/libmtkcam_stdutils.so| \
-        vendor/lib64/hw/mt6855/android.hardware.camera.provider@2.6-impl-mediatek.so)
+        vendor/lib*/libmtkcam_stdutils.so)
             "${PATCHELF}" --replace-needed "libutils.so" "libutils-v32.so" "$2"
             [ "$2" = "" ] && return 0
             ;;
