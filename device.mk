@@ -157,6 +157,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     libudfpshandler \
+    sensors.udfps \
     sensors.xiaomi.v2
 
 PRODUCT_PACKAGES += \
