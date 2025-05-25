@@ -103,6 +103,10 @@ function blob_fixup {
             sed -i 's/start/enable/' "$2"
             [ "$2" = "" ] && return 0
             ;;
+        vendor/lib64/hw/mt6855/android.hardware.camera.provider@2.6-impl-mediatek.so)
+            "${PATCHELF}" --add-needed libshim_camera_metadata.so "${2}"
+            [ "$2" = "" ] && return 0
+            ;;
         vendor/lib64/hw/android.hardware.thermal@2.0-impl.so)
             "${PATCHELF}" --replace-needed "libutils.so" "libutils-v32.so" "${2}"
             [ "$2" = "" ] && return 0
