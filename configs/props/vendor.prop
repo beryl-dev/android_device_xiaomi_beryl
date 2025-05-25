@@ -125,6 +125,7 @@ ro.vendor.mtk_mvpu_security_support=0
 ro.vendor.mtk_sec_video_path_support=1
 ro.vendor.mtk_video_hevc_enc_support=1
 ro.vendor.mtk.c2.vdec.fmt.support.level=3
+vendor.media.omx=0
 vendor.mtk.vdec.waitkeyframeforplay=9
 
 # Radio
