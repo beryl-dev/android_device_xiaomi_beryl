@@ -124,6 +124,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     libexpat.vendor \
+    libmemunreachable.vendor \
     libunwindstack.vendor
 
 # ConsumerIr
