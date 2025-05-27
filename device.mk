@@ -74,6 +74,9 @@ PRODUCT_PACKAGES += \
     MtkInCallService
 
 PRODUCT_PACKAGES += \
+    android.hardware.audio@7.0.vendor:64
+
+PRODUCT_PACKAGES += \
     libaudiofoundation:32 \
     libaudiofoundation.vendor:32 \
     libaudioclient_aidl_conversion.vendor:32 \
