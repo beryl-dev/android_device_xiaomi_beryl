@@ -60,29 +60,29 @@ PRODUCT_SHIPPING_API_LEVEL := 34
 $(call soong_config_set,android_hardware_audio,run_64bit,true)
 
 PRODUCT_PACKAGES += \
-    android.hardware.audio@7.0-impl \
-    android.hardware.audio.effect@7.0-impl \
-    android.hardware.soundtrigger@2.3-impl \
+    android.hardware.audio@7.0-impl:32 \
+    android.hardware.audio.effect@7.0-impl:32 \
+    android.hardware.soundtrigger@2.3-impl:32 \
     android.hardware.audio.service
 
 PRODUCT_PACKAGES += \
-    audio.bluetooth.default \
-    audio.usb.default \
-    android.hardware.bluetooth.audio-impl
+    audio.bluetooth.default:32 \
+    audio.usb.default:32 \
+    android.hardware.bluetooth.audio-impl:32
 
 PRODUCT_PACKAGES += \
     MtkInCallService
 
 PRODUCT_PACKAGES += \
-    libaudiofoundation \
-    libaudiofoundation.vendor \
-    libaudioclient_aidl_conversion.vendor \
-    libbluetooth_audio_session \
-    libalsautils \
-    libnbaio_mono \
-    libtinycompress \
-    libdynproc \
-    libhapticgenerator
+    libaudiofoundation:32 \
+    libaudiofoundation.vendor:32 \
+    libaudioclient_aidl_conversion.vendor:32 \
+    libbluetooth_audio_session:32 \
+    libalsautils:32 \
+    libnbaio_mono:32 \
+    libtinycompress:32 \
+    libdynproc:32 \
+    libhapticgenerator:32
 
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(DEVICE_PATH)/configs/audio/,$(TARGET_COPY_OUT_VENDOR)/etc)
