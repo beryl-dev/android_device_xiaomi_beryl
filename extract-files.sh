@@ -117,6 +117,9 @@ function blob_fixup {
             "$PATCHELF" --add-needed "android.hardware.sensors@1.0-convert-shared.so" "$2"
             [ "$2" = "" ] && return 0
             ;;
+        vendor/lib/hw/audio.primary.mediatek.so)
+             "${PATCHELF}" --replace-needed "libalsautils.so" "libalsautils-v31.so" "${2}"
+             ;;
         vendor/lib*/libmtkcam_stdutils.so)
             "${PATCHELF}" --replace-needed "libutils.so" "libutils-v32.so" "$2"
             [ "$2" = "" ] && return 0
