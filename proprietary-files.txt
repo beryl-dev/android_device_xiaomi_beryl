@@ -26,6 +26,7 @@ vendor/lib/libaurisysdemo.so
 vendor/lib/libbessound_hd_mtk_vendor.so
 vendor/lib/libblisrc32_vendor.so
 vendor/lib/libbwc.so
+vendor/lib64/libbwc.so
 vendor/lib/libcvsd_mtk.so
 vendor/lib/libladder.so
 vendor/lib/libmsbc_mtk.so
@@ -167,10 +168,8 @@ vendor/lib64/libbluetooth_mtk_pure.so
 vendor/lib64/libbt-vendor.so
 
 # Bluetooth (A2DP)
-vendor/lib64/hw/vendor.mediatek.hardware.bluetooth.audio@2.2-impl.so
-vendor/lib64/libbluetooth_audio_session_mediatek.so
-vendor/lib64/vendor.mediatek.hardware.bluetooth.audio@2.1.so
-vendor/lib64/vendor.mediatek.hardware.bluetooth.audio@2.2.so
+vendor/lib/vendor.mediatek.hardware.bluetooth.audio@2.1.so
+vendor/lib/vendor.mediatek.hardware.bluetooth.audio@2.2.so
 
 # Camera
 vendor/bin/hw/mt6855/camerahalserver;SYMLINK=vendor/bin/hw/camerahalserver
@@ -2440,7 +2439,6 @@ vendor/etc/permissions/android.hardware.keystore.app_attest_key.xml:vendor/etc/p
 vendor/bin/hw/android.hardware.media.c2@1.2-mediatek-64b
 vendor/bin/vpud
 vendor/etc/init/android.hardware.media.c2@1.2-mediatek-64b.rc
-vendor/etc/init/vpud.rc
 vendor/etc/vintf/manifest/manifest_media_c2_V1_2_default.xml
 vendor/lib/mt6855/libmtk_drvb.so;SYMLINK=vendor/lib/libmtk_drvb.so
 vendor/lib/libmsbc_mtk.so
@@ -2449,6 +2447,8 @@ vendor/lib/libvcodec_oal.so
 vendor/lib/libvcodec_utility_plat.mt6855.so
 vendor/lib/libvpu5.so
 vendor/lib/libvpud_vcodec.so
+vendor/lib/mt6855/libvcodecdrv.so;SYMLINK=vendor/lib/libvcodecdrv.so
+vendor/lib/mt6855/libvcodec_utility.so;SYMLINK=vendor/lib/libvcodec_utility.so
 vendor/lib64/AVCSecureVdecCA.so
 vendor/lib64/HEVCSecureVdecCA.so
 vendor/lib64/VP9SecureVdecCA.so
@@ -2505,6 +2505,27 @@ vendor/etc/vintf/manifest/manifest_apuware_apusys.xml
 vendor/etc/vintf/manifest/manifest_apuware_hmp.xml
 vendor/etc/vintf/manifest/manifest_apuware_utils.xml
 vendor/etc/nnapi_powerhal.json
+vendor/lib/mt6855/libneuralnetworks_sl_driver_mtk_prebuilt.so;DISABLE_CHECKELF;SYMLINK=vendor/lib/libneuralnetworks_sl_driver_mtk_prebuilt.so
+vendor/lib/mt6855/libneuron_adapter_mgvi.so;DISABLE_CHECKELF;SYMLINK=vendor/lib/libneuron_adapter_mgvi.so
+vendor/lib/mt6855/libnir_neon_driver.so;SYMLINK=vendor/lib/libnir_neon_driver.so
+vendor/lib/libapu_mdw.so
+vendor/lib/libapu_mdw_batch.so
+vendor/lib/libapusys.so
+vendor/lib/libapusys_edma.so
+vendor/lib/libarmnn.so
+vendor/lib/libarmnn_ndk.mtk.vndk.so
+vendor/lib/libcmdl.so
+vendor/lib/libcmdl_ndk.mtk.vndk.so
+vendor/lib/libneuroeara.so
+vendor/lib/libneuron_graph_delegate.mtk.so
+vendor/lib/libneuropilot_hal_utils.so
+vendor/lib/libnir_neon_driver_ndk.mtk.vndk.so;FIX_SONAME
+vendor/lib/libtflite_mtk.so;DISABLE_CHECKELF
+vendor/lib/vendor.mediatek.hardware.apmonitor@2.0.so
+vendor/lib/vendor.mediatek.hardware.apuware.utils@2.0.so
+vendor/lib/vendor.mediatek.hardware.neuropilot.agent@1.0.so
+vendor/lib/vendor.mediatek.hardware.neuropilot.agent@1.1.so
+vendor/lib/vendor.mediatek.hardware.neuropilot.agent@1.2.so
 vendor/lib64/mt6855/libneuralnetworks_sl_driver_mtk_prebuilt.so;DISABLE_CHECKELF;SYMLINK=vendor/lib64/libneuralnetworks_sl_driver_mtk_prebuilt.so
 vendor/lib64/mt6855/libneuron_adapter_mgvi.so;DISABLE_CHECKELF;SYMLINK=vendor/lib64/libneuron_adapter_mgvi.so
 vendor/lib64/mt6855/libneuron_runtime.5.so;SYMLINK=vendor/lib64/libneuron_runtime.5.so

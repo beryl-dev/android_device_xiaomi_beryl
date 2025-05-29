@@ -28,6 +28,10 @@ source "${HELPER}"
 function vendor_imports() {
 	cat <<EOF >>"$1"
  	       "device/xiaomi/beryl",
+               "hardware/google/interfaces",
+               "hardware/google/pixel",
+               "hardware/lineage/interfaces/power-libperfmgr",
+               "hardware/mediatek/libmtkperf_client",
  	       "hardware/mediatek",
 	       "hardware/xiaomi"
 EOF
