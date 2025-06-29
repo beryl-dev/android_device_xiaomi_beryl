@@ -2441,9 +2441,7 @@ vendor/etc/permissions/android.hardware.keystore.app_attest_key.xml:vendor/etc/p
 
 # Media
 vendor/bin/hw/android.hardware.media.c2@1.2-mediatek-64b
-vendor/bin/vpud
 vendor/etc/init/android.hardware.media.c2@1.2-mediatek-64b.rc
-vendor/etc/init/vpud.rc
 vendor/etc/vintf/manifest/manifest_media_c2_V1_2_default.xml
 vendor/lib/mt6855/libmtk_drvb.so;SYMLINK=vendor/lib/libmtk_drvb.so
 vendor/lib/mt6855/libvcodecdrv.so;SYMLINK=vendor/lib/libvcodecdrv.so
