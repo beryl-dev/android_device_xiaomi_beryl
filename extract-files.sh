@@ -120,6 +120,12 @@ function blob_fixup {
         vendor/lib/hw/audio.primary.mediatek.so)
              "${PATCHELF}" --replace-needed "libalsautils.so" "libalsautils-v31.so" "${2}"
              ;;
+        vendor/lib/libnvram.so|\
+        vendor/lib64/libnvram.so|\
+        vendor/lib64/libsysenv.so)
+            "$PATCHELF" --add-needed "libbase_shim.so" "$2"
+            [ "$2" = "" ] && return 0
+            ;;
         vendor/lib64/mt6855/libmtkcam_stdutils.so)
             "${PATCHELF}" --replace-needed "libutils.so" "libutils-v32.so" "$2"
             [ "$2" = "" ] && return 0
