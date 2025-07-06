@@ -105,7 +105,11 @@ function blob_fixup {
             [ "$2" = "" ] && return 0
             ;;
         vendor/lib64/hw/mt6855/android.hardware.camera.provider@2.6-impl-mediatek.so)
-            "${PATCHELF}" --add-needed libshim_camera_metadata.so "${2}"
+            "${PATCHELF}" --add-needed "libshim_camera_metadata.so" "${2}"
+            [ "$2" = "" ] && return 0
+            ;;
+        vendor/lib64/hw/hwcomposer.mtk_common.so)
+            "${PATCHELF}" --add-needed "libprocessgroup_shim.so" "${2}"
             [ "$2" = "" ] && return 0
             ;;
         vendor/lib64/hw/android.hardware.thermal@2.0-impl.so)
