@@ -2254,6 +2254,7 @@ vendor/lib64/mt6855/libdip_postproc.so;SYMLINK=vendor/lib64/libdip_postproc.so
 vendor/lib64/libaal_cust.so
 vendor/lib64/libaal_key.so
 vendor/lib64/libaal_mtk.so
+vendor/lib64/libbwc.so
 vendor/lib64/libcom.xiaomi.pluginutils.so
 vendor/lib64/libdre.so
 vendor/lib64/libdre.so
