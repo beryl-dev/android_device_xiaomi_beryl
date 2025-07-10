@@ -124,6 +124,7 @@ function blob_fixup {
         vendor/lib/hw/audio.primary.mediatek.so)
              "${PATCHELF}" --replace-needed "libalsautils.so" "libalsautils-v31.so" "${2}"
              ;;
+        vendor/lib64/ese_spi_nxp_snxxx.so|\
         vendor/lib/libnvram.so|\
         vendor/lib64/libnvram.so|\
         vendor/lib64/libsysenv.so)
