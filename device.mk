@@ -353,6 +353,9 @@ PRODUCT_PACKAGES += \
     android.hardware.radio@1.6.vendor
 
 PRODUCT_PACKAGES += \
+    vendor_mdota_symlink
+
+PRODUCT_PACKAGES += \
     libaudioclient_shim
 
 # Secure Element
