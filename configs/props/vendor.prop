@@ -148,6 +148,7 @@ ro.telephony.default_network=33,33,33,33
 ro.telephony.iwlan_operation_mode=AP-assisted
 ro.telephony.sim.count=2
 ro.vendor.md_prop_ver=1
+ro.vendor.mediatek.rsc_name=GL
 ro.vendor.mtk_c2k_lte_mode=2
 ro.vendor.mtk_c2k_support=1
 ro.vendor.mtk_eccci_c2k=1
@@ -158,6 +159,7 @@ ro.vendor.mtk_lte_support=1
 ro.vendor.mtk_mcf_support=1
 ro.vendor.mtk_md_world_mode_support=1
 ro.vendor.mtk_mobile_management=1
+ro.vendor.mtk_md3_support=0
 ro.vendor.mtk_protocol1_rat_config=N/C/Lf/Lt/W/G
 ro.vendor.mtk_ps1_rat=N/C/Lf/Lt/W/G
 ro.vendor.mtk_ril_mode=c6m_1rild
@@ -172,6 +174,8 @@ ro.vendor.radio.max.multisim=dsds
 ro.vendor.sim_me_lock_mode=3
 telephony.active_modems.max_count=2
 telephony.lteOnCdmaDevice=1
+ro.vendor.sys.current_rsc_path=/system/etc/rsc/GL
+ro.vendor.vnd.current_rsc_path=/vendor/etc/rsc/GL
 ro.vendor.mtk_mipc_support=1
 
 # SurfaceFlinger
